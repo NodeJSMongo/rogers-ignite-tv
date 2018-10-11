@@ -1,0 +1,13 @@
+.headerHero{
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color:#000;
+  grid-auto-rows: minmax(412px , auto); /* fallback in case of no image*/
+  justify-items:center;
+  picture{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

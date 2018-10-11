@@ -1,0 +1,66 @@
+/*Grid layout areas*/
+
+/*--------------------------------------- */
+/* Grid template area names are defined here*/
+/*----------------------------------------*/
+
+.headerNav{grid-area: hdn ;}
+.subHeader{grid-area: shd ;}
+.headerHero{grid-area: hdh ;}
+.featureProduct{grid-area:fp;}
+.featureMedia{grid-area:fm;}
+.featureAccess{grid-area:fa;}
+.featureBundles{grid-area:fb;}
+.placeOrder{grid-area:po;}
+.modal{grid-area:mo}
+.footerLinks{grid-area:fl;}
+.footerCopy{grid-area:fc;}
+.header-mobile{grid-area: hdnm ;}
+/*------------------------------------------ */
+/* Mobile first layout: This website has one */
+/*  breakpoint at 767px;                     */
+/*-------------------------------------------*/
+
+/* Layout for max-width 767px*/
+/*
+.wrapper{
+  display: grid;
+}*/
+
+/*Layout for larger screens from 768px to above*/
+
+.wrapper{
+  display: grid;
+  grid-template:
+                 "hdnm"
+                 "hdn"
+                 "shd"
+                 "hdh"
+                 "fp"
+                 "fm"
+                 "fa"
+                 "fb"
+                 "po"
+                 "mo"
+                 "fl"
+                 "fc";
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper{
+    display: grid;
+    grid-template-columns:repeat(4 , 1fr);
+    grid-template: ". . . ."
+                   "hdn hdn hdn hdn"
+                   "shd shd shd shd"
+                   "hdh hdh hdh hdh"
+                   "fp fp fp fp"
+                   "fm fm fm fm"
+                   "fa fa fa fa"
+                   "fb fb fb fb"
+                   "po po po po"
+                   "mo mo mo mo"
+                   "fl fl fl fl"
+                   "fc fc fc fc";
+  }
+}

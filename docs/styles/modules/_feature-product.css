@@ -1,0 +1,33 @@
+.featureProduct{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &-image{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &--part{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: start;
+
+      picture{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background-color: #fff;
+        img{
+          transform: scale(.8);
+          margin-bottom: -2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .featureProduct{
+    &-image{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

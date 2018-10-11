@@ -1,0 +1,217 @@
+.headerNav{
+  display: none;
+}
+.headerNav .header-nav .nav-lower .links .active{
+  color: #da291c;
+}
+
+.headerNav .header-nav .nav-lower li > a:hover{
+  color: #da291c;
+}
+
+@media only screen and  (min-width:768px) and (max-width:1023px){
+  .headerNav{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-bottom:3px #eee solid;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    z-index: 15;
+  }
+
+  .header-logo{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: start;
+    margin-left: 2%;
+    transform:scale( 1 , 1.2);
+  }
+
+  .header-nav{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: center;
+    text-align: right;
+    width: 100%;
+
+    div:nth-child(1){
+      margin: -2rem 1rem -2rem 0;
+      padding-top: 1rem;
+      ul{
+        display: block;
+        list-style-type: none;
+        li{
+          display: inline-block;
+          font-size: .7rem;
+          font-weight: bold;
+        }
+      }
+    }
+    div:nth-child(2){
+      margin: -2rem 1rem -2rem 0;
+      padding-bottom: 1rem;
+      ul{
+        display: block;
+        list-style-type: none;
+        li{
+          display: inline-block;
+          font-size: .7em;
+          font-weight: 400;
+          color: #000;
+          margin: auto -.5rem;
+          a{
+            text-decoration: none;
+            color: #000;
+          }
+          div >span > a{
+            color: #fff;
+          }
+        }
+        li:hover{
+          border-bottom: 2px #da291c solid;
+        }
+      }
+    }
+  }
+
+  .header-search{
+    grid-column: 3/4;
+    grid-row: 1;
+    justify-self: start;
+    align-self: start;
+    div i{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+@media only screen and (min-width:1024px)  {
+  .headerNav{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border-bottom:3px #eee solid;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    z-index: 15;
+  }
+
+  .header-logo{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: start;
+    margin-left: 2%;
+    transform:scale( 1 , 1.2);
+  }
+
+  .header-nav{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: center;
+    text-align: right;
+    width: 100%;
+
+    div:nth-child(1){
+      margin: -2rem 1rem -2rem 0;
+      padding-top: 1rem;
+      ul{
+        display: block;
+        list-style-type: none;
+        li{
+          display: inline-block;
+          font-size: .9rem;
+          font-weight: bold;
+        }
+      }
+    }
+    div:nth-child(2){
+      margin: -2rem 1rem -2rem 0;
+      padding-bottom: 1rem;
+      ul{
+        display: block;
+        list-style-type: none;
+        li{
+          display: inline-block;
+          font-size: .9em;
+          font-weight: 400;
+         a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+          }
+          div >span > a{
+            padding-left: 1rem;
+            line-height: 1.4;
+            color: #fff;
+          }
+        }
+        li:hover{
+          border-bottom: 2px #da291c solid;
+        }
+      }
+    }
+  }
+
+  .header-search{
+    grid-column: 3/4;
+    grid-row: 1;
+    justify-self: start;
+    align-self: start;
+    div i{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.links-position{
+  position: relative;
+}
+
+.sublinks{
+  display: block;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  position: absolute;
+  span{
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+.show-sublinks__dropdown{
+  opacity: 1;
+  display: block;
+  position: absolute;
+  width: 200px;
+  top: 171%;
+  left: 0;
+  span{
+    visibility:visible;
+    display: block;
+    height: 2rem;
+    text-align: left;
+    background-color: #da291c;
+    transition: all .5s ease-out;
+    a{
+      color: #bbb;
+      font-weight: 300;
+    }
+    i{
+      display: none;
+    }
+  }
+  span:hover{
+    i{
+      display: inline;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.featureMedia{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &-image{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    picture{
+      grid-column: 1/2;
+      grid-row: 1/2;
+      background: #fff;
+      img{
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media only Screen and (min-width: 768px) {
+  .featureMedia{
+    &-image{
+      picture{
+        img{
+          transform: scale(1);
+          margin: auto;
+        }
+      }
+    }
+  }
+}
