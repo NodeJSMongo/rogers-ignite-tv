@@ -13,6 +13,7 @@ tabImages[0].classList.add('setFront');
 /* Find the current Tab */
 
 
+
 tabLinks.forEach(function(link){
   link.onclick = function(){
     if(tabLinks[0] == this){
